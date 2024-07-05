@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- @format -->
 
-## Getting Started
+## Install package/library for the project:
 
-First, run the development server:
+```bash
+npm install
+# or
+yarn
+```
+
+## Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Add your database url to the env file
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## I use postgresql for this application, change db_user, db_password, db_name as your configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+DATABASE_URL="postgresql://db_user:db_password@localhost:5432/db_name?schema=public"
+```
 
-## Learn More
+## To apply the data model to your PostgreSQL database, run the following commands:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx prisma migrate dev --name init
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Generate the Prisma client to interact with your database:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npx prisma generate
+```
 
-## Deploy on Vercel
+## I have a button in the middle of screen for user quickly create a restaurant list.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## After click this button, a mock data will be stored to the database
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Function:
+
+# 1. List restaurants
+
+# 2. Add/remove favorite restaurant
