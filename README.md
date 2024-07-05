@@ -40,8 +40,9 @@ npx prisma generate
 
 ## After click this button, a mock data will be stored to the database
 
-## Function:
+# Function:
 
-# 1. List restaurants
-
-# 2. Add/remove favorite restaurant
+```bash
+1. List restaurants
+2. Add/remove favorite restaurant
+```
